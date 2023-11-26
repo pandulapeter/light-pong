@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dimpnh2sldyc0"]
+
+[ext_resource type="Texture2D" uid="uid://cbtkfojm676kb" path="res://wooden_texture.png" id="1_58ani"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f1gh4"]
+size = Vector3(20, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a288b"]
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_58ani")
+metallic = 0.25
+metallic_specular = 0.8
+uv1_scale = Vector3(4, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ynxr2"]
+material = SubResource("StandardMaterial3D_a288b")
+size = Vector3(20, 1, 1)
+
+[node name="Wall" type="StaticBody3D"]
+
+[node name="CollisionShape" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_f1gh4")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_ynxr2")
