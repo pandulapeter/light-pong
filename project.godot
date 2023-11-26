@@ -21,6 +21,10 @@ window/size/viewport_width=1920
 window/size/viewport_height=1024
 window/size/mode=3
 
+[editor]
+
+movie_writer/movie_file="/Users/peterpandula/Projects/Godot/LightPong/recording.avi"
+
 [input]
 
 player_left_move_up={
